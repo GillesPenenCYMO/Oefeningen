@@ -1,4 +1,4 @@
-package cymo.project1.Config;
+package cymo.project2.Config;
 
 import io.confluent.kafka.serializers.KafkaAvroSerializer;
 import org.apache.kafka.clients.producer.KafkaProducer;

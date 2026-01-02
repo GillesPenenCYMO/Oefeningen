@@ -1,4 +1,4 @@
-package cymo.project1.Producer;
+package cymo.project2.Producer;
 
 import org.springframework.stereotype.Service;
 
