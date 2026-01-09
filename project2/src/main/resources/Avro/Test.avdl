@@ -1,0 +1,8 @@
+namespace Schema;
+
+schema Test;
+
+record Test {
+	string helloworld;
+	string tijd;
+}

@@ -15,7 +15,7 @@ public class ScheduledProducer {
         this.producer = producer;
     }
 
-    @Scheduled(fixedRate = 1000) // elke 1 seconde
+    @Scheduled(fixedRate = 1000)
     public void produceMessage() {
         producer.sendMessage("Hello world! " + System.currentTimeMillis());
     }

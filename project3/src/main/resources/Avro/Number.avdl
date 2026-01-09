@@ -1,0 +1,10 @@
+/*
+ * Comment for license information.
+ */
+namespace Schema;
+
+schema Number;
+record Number{
+	int number;
+	string helloworld;
+}

@@ -1,0 +1,10 @@
+/*
+ * Comment for license information.
+ */
+namespace Schema;
+
+schema HelloWorld;
+record HelloWorld{
+	string helloworld;
+	string tijd;
+}

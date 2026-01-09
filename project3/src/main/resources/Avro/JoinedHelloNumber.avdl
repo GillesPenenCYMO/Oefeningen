@@ -1,0 +1,12 @@
+/*
+ * Comment for license information.
+ */
+namespace Schema;
+
+schema JoinedHelloNumber;
+record JoinedHelloNumber{
+	string helloworld;
+	string tijd;
+	int number;
+
+}

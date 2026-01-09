@@ -75,6 +75,12 @@
             <artifactId>kafka-avro-serializer</artifactId>
             <version>7.8.0</version>
         </dependency>
+        <dependency>
+            <groupId>io.confluent</groupId>
+            <artifactId>kafka-streams-avro-serde</artifactId>
+            <version>8.1.1</version>
+        </dependency>
+
 
 
 	</dependencies>
@@ -102,16 +108,13 @@
                             <goal>idl-protocol</goal>
                         </goals>
                         <configuration>
-                            <sourceDirectory>${project.basedir}/src/main/avro</sourceDirectory>
-<!--                            <outputDirectory>${project.basedir}/target/generated-sources/avro</outputDirectory>-->
+                            <sourceDirectory>${project.basedir}/src/main/resources/Avro</sourceDirectory>
+                            <outputDirectory>${project.basedir}/target/generated-sources/avro</outputDirectory>
                             <stringType>String</stringType>
                         </configuration>
                     </execution>
                 </executions>
             </plugin>
-
-
-
 
 
 		</plugins>

@@ -1,6 +1,11 @@
-package cymo.project2.Producer;
+package comy.Producer;
 
-import Schema.Test;
+
+
+
+
+import Schema.Number;
+import org.apache.commons.lang3.RandomUtils;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
@@ -9,19 +14,18 @@ import org.springframework.stereotype.Service;
 @Service
 public class AvroProducer {
 
-    private final KafkaTemplate<String, Test> kafkaTemplate;
+    private final KafkaTemplate<String, Number> kafkaTemplate;
 
-    public AvroProducer(KafkaTemplate<String, Test> kafkaTemplate) {
+    public AvroProducer(KafkaTemplate<String, Number> kafkaTemplate) {
         this.kafkaTemplate = kafkaTemplate;
     }
 
     @Scheduled(fixedRate = 1000)
     public void sendMessage() {
-        String tijd = String.valueOf(System.currentTimeMillis());
-        Test test =  Test.newBuilder()
+        Number number = Number.newBuilder()
                 .setHelloworld("helloworld")
-                .setTijd(tijd)
+                .setNumber(RandomUtils.nextInt())
                 .build();
-        kafkaTemplate.send("test2-input-topic", "test2", test);
+        kafkaTemplate.send("test3-NumberInput-topic", "test3", number);
     }
 }

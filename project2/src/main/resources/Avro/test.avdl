@@ -1,8 +1,0 @@
-namespace SChema;
-
-schema test;
-
-record test{
-	string helloworld;
-	string tijd;
-}
